@@ -1,5 +1,6 @@
 package com.basic.myspringboot.runner;
 
+import com.basic.myspringboot.config.vo.CustomerVO;
 import com.basic.myspringboot.property.MybootProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -22,7 +23,13 @@ public class MyRunner implements ApplicationRunner {
     @Autowired
     private MybootProperties properties;
 
+    @Autowired
+    private CustomerVO customer;
+
     public void run(ApplicationArguments args) throws Exception {
+        System.out.println("Environment ${spring.profiles.active} = " +
+                environment.getProperty("spring.profiles.active"));
+        System.out.println("CustomerVO Bean = " + customer);
         System.out.println("MybootProperties = " + properties.getFullName());
         System.out.println("@Value ${myboot.name} = " + name);
         System.out.println("@Value ${myboot.age} = " + age);
