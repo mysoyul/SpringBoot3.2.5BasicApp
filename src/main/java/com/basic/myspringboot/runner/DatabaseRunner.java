@@ -23,9 +23,7 @@ public class DatabaseRunner implements ApplicationRunner {
         
         try (Connection connection = dataSource.getConnection()) {
             DatabaseMetaData metaData = connection.getMetaData();
-            log.info("Database Product Name / Version = {}",
-                    metaData.getDatabaseProductName(),
-                    metaData.getDatabaseProductVersion());
+            log.info("Database Product Name = {}", metaData.getDatabaseProductName());
             log.info("Database URL = {}", metaData.getURL());
             log.info("Database UserName = {}", metaData.getUserName());
         }
