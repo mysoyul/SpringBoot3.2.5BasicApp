@@ -237,3 +237,91 @@
 2024-05-09T15:20:42.259+09:00  WARN 30340 --- [MyBootApp] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-222]
 2024-05-09T15:20:42.259+09:00  INFO 30340 --- [MyBootApp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
 2024-05-09T15:20:42.260+09:00  INFO 30340 --- [MyBootApp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2024-05-09T15:25:22.684+09:00  INFO 25584 --- [MyBootApp] [restartedMain] com.basic.myspringboot.Application       : Starting Application using Java 17 with PID 25584 (C:\SpringBoot3.2_Source\MySpringBoot3.2.5App\target\classes started by vega2 in C:\SpringBoot3.2_Source\MySpringBoot3.2.5App)
+2024-05-09T15:25:22.690+09:00 DEBUG 25584 --- [MyBootApp] [restartedMain] com.basic.myspringboot.Application       : Running with Spring Boot v3.2.5, Spring v6.1.6
+2024-05-09T15:25:22.691+09:00  INFO 25584 --- [MyBootApp] [restartedMain] com.basic.myspringboot.Application       : The following 1 profile is active: "test"
+2024-05-09T15:25:22.833+09:00  INFO 25584 --- [MyBootApp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-05-09T15:25:22.833+09:00  INFO 25584 --- [MyBootApp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-05-09T15:25:26.640+09:00  INFO 25584 --- [MyBootApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-09T15:25:26.690+09:00  INFO 25584 --- [MyBootApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 0 JPA repository interfaces.
+2024-05-09T15:25:29.576+09:00  INFO 25584 --- [MyBootApp] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-05-09T15:25:29.605+09:00  INFO 25584 --- [MyBootApp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-09T15:25:29.606+09:00  INFO 25584 --- [MyBootApp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-09T15:25:29.839+09:00  INFO 25584 --- [MyBootApp] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-09T15:25:29.843+09:00  INFO 25584 --- [MyBootApp] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7008 ms
+2024-05-09T15:25:30.295+09:00  INFO 25584 --- [MyBootApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-05-09T15:25:30.907+09:00  INFO 25584 --- [MyBootApp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:03320822-2fcd-4f9c-b84d-84bccc04c739 user=SA
+2024-05-09T15:25:30.911+09:00  INFO 25584 --- [MyBootApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-05-09T15:25:30.940+09:00  INFO 25584 --- [MyBootApp] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:03320822-2fcd-4f9c-b84d-84bccc04c739'
+2024-05-09T15:25:31.617+09:00  INFO 25584 --- [MyBootApp] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-09T15:25:31.793+09:00  INFO 25584 --- [MyBootApp] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-09T15:25:31.935+09:00  INFO 25584 --- [MyBootApp] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-05-09T15:25:32.463+09:00  INFO 25584 --- [MyBootApp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-09T15:25:33.391+09:00  INFO 25584 --- [MyBootApp] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-09T15:25:33.403+09:00  INFO 25584 --- [MyBootApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-09T15:25:33.697+09:00  WARN 25584 --- [MyBootApp] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-09T15:25:35.029+09:00  WARN 25584 --- [MyBootApp] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-05-09T15:25:36.668+09:00  INFO 25584 --- [MyBootApp] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-05-09T15:25:36.700+09:00  INFO 25584 --- [MyBootApp] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-05-09T15:25:37.029+09:00  INFO 25584 --- [MyBootApp] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-05-09T15:25:37.075+09:00  INFO 25584 --- [MyBootApp] [restartedMain] com.basic.myspringboot.Application       : Started Application in 15.791 seconds (process running for 17.246)
+2024-05-09T15:25:37.189+09:00  INFO 25584 --- [MyBootApp] [restartedMain] com.basic.myspringboot.runner.MyRunner   : Logger 구현객체 클래스 이름 = ch.qos.logback.classic.Logger
+2024-05-09T15:25:37.190+09:00  INFO 25584 --- [MyBootApp] [restartedMain] com.basic.myspringboot.runner.MyRunner   : Environment ${spring.profiles.active} = test
+2024-05-09T15:25:37.190+09:00  INFO 25584 --- [MyBootApp] [restartedMain] com.basic.myspringboot.runner.MyRunner   : CustomerVO Bean = CustomerVO(id=200, mode=개발환경)
+2024-05-09T15:25:37.193+09:00  INFO 25584 --- [MyBootApp] [restartedMain] com.basic.myspringboot.runner.MyRunner   : MybootProperties = Spring 테스트환경 Boot
+2024-05-09T15:25:37.193+09:00  INFO 25584 --- [MyBootApp] [restartedMain] com.basic.myspringboot.runner.MyRunner   : @Value ${myboot.name} = Spring 테스트환경
+2024-05-09T15:25:37.194+09:00  INFO 25584 --- [MyBootApp] [restartedMain] com.basic.myspringboot.runner.MyRunner   : @Value ${myboot.age} = 46
+2024-05-09T15:25:37.195+09:00  INFO 25584 --- [MyBootApp] [restartedMain] com.basic.myspringboot.runner.MyRunner   : Environment ${myboot.fullName} = Spring 테스트환경 Boot
+2024-05-09T15:25:37.195+09:00  INFO 25584 --- [MyBootApp] [restartedMain] com.basic.myspringboot.runner.MyRunner   : Environment ${local.server.port} = 8080
+2024-05-09T15:25:37.196+09:00 DEBUG 25584 --- [MyBootApp] [restartedMain] com.basic.myspringboot.runner.MyRunner   : VM argument foo : false
+2024-05-09T15:25:37.196+09:00 DEBUG 25584 --- [MyBootApp] [restartedMain] com.basic.myspringboot.runner.MyRunner   : Program argument bar : true
+2024-05-09T15:25:37.197+09:00  INFO 25584 --- [MyBootApp] [restartedMain] com.basic.myspringboot.runner.MyRunner   : 환경변수 name = bar
+2024-05-09T15:25:37.198+09:00  INFO 25584 --- [MyBootApp] [restartedMain] com.basic.myspringboot.runner.MyRunner   : 환경변수 name = spring.application.name
+2024-05-09T15:25:59.486+09:00  INFO 25584 --- [MyBootApp] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-09T15:25:59.542+09:00  WARN 25584 --- [MyBootApp] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-222]
+2024-05-09T15:25:59.546+09:00  INFO 25584 --- [MyBootApp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-05-09T15:25:59.556+09:00  INFO 25584 --- [MyBootApp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-05-09T15:26:32.156+09:00  INFO 2444 --- [MyBootApp] [restartedMain] c.b.m.Application                        : Starting Application using Java 17 with PID 2444 (C:\SpringBoot3.2_Source\MySpringBoot3.2.5App\target\classes started by vega2 in C:\SpringBoot3.2_Source\MySpringBoot3.2.5App)
+2024-05-09T15:26:32.178+09:00 DEBUG 2444 --- [MyBootApp] [restartedMain] c.b.m.Application                        : Running with Spring Boot v3.2.5, Spring v6.1.6
+2024-05-09T15:26:32.180+09:00  INFO 2444 --- [MyBootApp] [restartedMain] c.b.m.Application                        : The following 1 profile is active: "test"
+2024-05-09T15:26:32.307+09:00  INFO 2444 --- [MyBootApp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-05-09T15:26:32.309+09:00  INFO 2444 --- [MyBootApp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-05-09T15:26:35.123+09:00  INFO 2444 --- [MyBootApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-09T15:26:35.180+09:00  INFO 2444 --- [MyBootApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 0 JPA repository interfaces.
+2024-05-09T15:26:37.696+09:00  INFO 2444 --- [MyBootApp] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8080 (http)
+2024-05-09T15:26:37.745+09:00  INFO 2444 --- [MyBootApp] [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2024-05-09T15:26:37.747+09:00  INFO 2444 --- [MyBootApp] [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-09T15:26:37.942+09:00  INFO 2444 --- [MyBootApp] [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2024-05-09T15:26:37.946+09:00  INFO 2444 --- [MyBootApp] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5615 ms
+2024-05-09T15:26:38.425+09:00  INFO 2444 --- [MyBootApp] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2024-05-09T15:26:39.020+09:00  INFO 2444 --- [MyBootApp] [restartedMain] c.z.h.p.HikariPool                       : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:eecd0e7c-bc2f-4fd8-af95-12e9083790e4 user=SA
+2024-05-09T15:26:39.025+09:00  INFO 2444 --- [MyBootApp] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2024-05-09T15:26:39.057+09:00  INFO 2444 --- [MyBootApp] [restartedMain] o.s.b.a.h.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:eecd0e7c-bc2f-4fd8-af95-12e9083790e4'
+2024-05-09T15:26:39.735+09:00  INFO 2444 --- [MyBootApp] [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-09T15:26:39.894+09:00  INFO 2444 --- [MyBootApp] [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-09T15:26:39.993+09:00  INFO 2444 --- [MyBootApp] [restartedMain] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2024-05-09T15:26:40.746+09:00  INFO 2444 --- [MyBootApp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-09T15:26:42.292+09:00  INFO 2444 --- [MyBootApp] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-09T15:26:42.305+09:00  INFO 2444 --- [MyBootApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-09T15:26:42.655+09:00  WARN 2444 --- [MyBootApp] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-09T15:26:44.010+09:00  WARN 2444 --- [MyBootApp] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-05-09T15:26:45.037+09:00  INFO 2444 --- [MyBootApp] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-05-09T15:26:45.058+09:00  INFO 2444 --- [MyBootApp] [restartedMain] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-05-09T15:26:45.276+09:00  INFO 2444 --- [MyBootApp] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8080 (http) with context path ''
+2024-05-09T15:26:45.313+09:00  INFO 2444 --- [MyBootApp] [restartedMain] c.b.m.Application                        : Started Application in 14.565 seconds (process running for 17.064)
+2024-05-09T15:26:45.345+09:00  INFO 2444 --- [MyBootApp] [restartedMain] c.b.m.r.MyRunner                         : Logger 구현객체 클래스 이름 = org.apache.logging.slf4j.Log4jLogger
+2024-05-09T15:26:45.346+09:00  INFO 2444 --- [MyBootApp] [restartedMain] c.b.m.r.MyRunner                         : Environment ${spring.profiles.active} = test
+2024-05-09T15:26:45.347+09:00  INFO 2444 --- [MyBootApp] [restartedMain] c.b.m.r.MyRunner                         : CustomerVO Bean = CustomerVO(id=200, mode=개발환경)
+2024-05-09T15:26:45.351+09:00  INFO 2444 --- [MyBootApp] [restartedMain] c.b.m.r.MyRunner                         : MybootProperties = Spring 테스트환경 Boot
+2024-05-09T15:26:45.352+09:00  INFO 2444 --- [MyBootApp] [restartedMain] c.b.m.r.MyRunner                         : @Value ${myboot.name} = Spring 테스트환경
+2024-05-09T15:26:45.352+09:00  INFO 2444 --- [MyBootApp] [restartedMain] c.b.m.r.MyRunner                         : @Value ${myboot.age} = 69
+2024-05-09T15:26:45.353+09:00  INFO 2444 --- [MyBootApp] [restartedMain] c.b.m.r.MyRunner                         : Environment ${myboot.fullName} = Spring 테스트환경 Boot
+2024-05-09T15:26:45.354+09:00  INFO 2444 --- [MyBootApp] [restartedMain] c.b.m.r.MyRunner                         : Environment ${local.server.port} = 8080
+2024-05-09T15:26:45.354+09:00 DEBUG 2444 --- [MyBootApp] [restartedMain] c.b.m.r.MyRunner                         : VM argument foo : false
+2024-05-09T15:26:45.355+09:00 DEBUG 2444 --- [MyBootApp] [restartedMain] c.b.m.r.MyRunner                         : Program argument bar : true
+2024-05-09T15:26:45.356+09:00  INFO 2444 --- [MyBootApp] [restartedMain] c.b.m.r.MyRunner                         : 환경변수 name = bar
+2024-05-09T15:26:45.357+09:00  INFO 2444 --- [MyBootApp] [restartedMain] c.b.m.r.MyRunner                         : 환경변수 name = spring.application.name
+2024-05-09T16:08:51.902+09:00  INFO 2444 --- [MyBootApp] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-09T16:08:51.925+09:00  WARN 2444 --- [MyBootApp] [SpringApplicationShutdownHook] o.s.b.f.s.DisposableBeanAdapter          : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-222]
+2024-05-09T16:08:51.927+09:00  INFO 2444 --- [MyBootApp] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2024-05-09T16:08:51.933+09:00  INFO 2444 --- [MyBootApp] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
