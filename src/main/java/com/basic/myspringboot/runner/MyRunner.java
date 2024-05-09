@@ -2,6 +2,8 @@ package com.basic.myspringboot.runner;
 
 import com.basic.myspringboot.config.vo.CustomerVO;
 import com.basic.myspringboot.property.MybootProperties;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationArguments;
@@ -26,24 +28,27 @@ public class MyRunner implements ApplicationRunner {
     @Autowired
     private CustomerVO customer;
 
+    private Logger logger = LoggerFactory.getLogger(MyRunner.class);
+
     public void run(ApplicationArguments args) throws Exception {
-        System.out.println("Environment ${spring.profiles.active} = " +
+        logger.info("Logger 구현객체 클래스 이름 = {}",logger.getClass().getName());
+        logger.info("Environment ${spring.profiles.active} = {}",
                 environment.getProperty("spring.profiles.active"));
-        System.out.println("CustomerVO Bean = " + customer);
-        System.out.println("MybootProperties = " + properties.getFullName());
-        System.out.println("@Value ${myboot.name} = " + name);
-        System.out.println("@Value ${myboot.age} = " + age);
-        System.out.println("Environment ${myboot.fullName} = " +
+        logger.info("CustomerVO Bean = {}", customer);
+        logger.info("MybootProperties = " + properties.getFullName());
+        logger.info("@Value ${myboot.name} = " + name);
+        logger.info("@Value ${myboot.age} = " + age);
+        logger.info("Environment ${myboot.fullName} = " +
                 environment.getProperty("myboot.fullName"));
-        System.out.println("Environment ${local.server.port} = " +
+        logger.info("Environment ${local.server.port} = " +
                 environment.getProperty("local.server.port"));
 
-        System.out.println("VM argument foo : " + args.containsOption("foo"));
-        System.out.println("Program argument bar : " + args.containsOption("bar"));
+        logger.debug("VM argument foo : " + args.containsOption("foo"));
+        logger.debug("Program argument bar : " + args.containsOption("bar"));
 
         args.getOptionNames()//Set<String>
-                //.forEach(name -> System.out.println(name));  //Lambda Expression
-                .forEach(System.out::println);  //Method Reference
+                .forEach(name -> logger.info("환경변수 name = {}", name));  //Lambda Expression
+                //.forEach(System.out::println);  //Method Reference
 
     }
 }
