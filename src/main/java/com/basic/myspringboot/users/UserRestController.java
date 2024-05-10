@@ -4,6 +4,7 @@ import com.basic.myspringboot.exception.BusinessException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -28,6 +29,8 @@ public class UserRestController {
         return userRepository.save(user);
     }
 
+
+    @PreAuthorize("hasAuthority('ROLE_USER')")
     @GetMapping(value = "/{id}")
     public UserEntity getUser(@PathVariable Long id) {
         return getUserEntity(id);
@@ -42,6 +45,7 @@ public class UserRestController {
                 );
     }
 
+    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     @GetMapping
     public List<UserEntity> getUsers() {
         return userRepository.findAll();
