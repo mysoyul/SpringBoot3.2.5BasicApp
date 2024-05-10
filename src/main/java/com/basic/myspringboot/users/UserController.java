@@ -1,5 +1,6 @@
 package com.basic.myspringboot.users;
 
+import com.basic.myspringboot.users.vo.UserVO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,5 +22,11 @@ public class UserController {
         model.addAttribute("users", userRepository.findAll());
         return "index";
     }
+
+    @GetMapping("/signup")
+    public String showSignUpForm(UserVO user) {
+        return "add-user";
+    }
+
 
 }
