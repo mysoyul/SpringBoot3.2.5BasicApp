@@ -17,9 +17,11 @@ public class UserInfo {
     @Column(nullable = false)
     private String name;
 
+    //username
     @Column(unique = true, nullable = false)
     private String email;
 
+    //password
     @Column(nullable = false)
     private String password;
 
