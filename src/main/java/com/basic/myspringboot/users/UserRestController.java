@@ -3,6 +3,7 @@ package com.basic.myspringboot.users;
 import com.basic.myspringboot.exception.BusinessException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -24,12 +25,16 @@ public class UserRestController {
 
     @GetMapping(value = "/{id}")
     public UserEntity getUser(@PathVariable Long id) {
+        return getUserEntity(id);
+    }
+
+    private UserEntity getUserEntity(Long id) {
         return userRepository.findById(id)
                 .orElseThrow(() -> {
-                    String errMsg = String.format("ID = %d User Not Found", id);
-                    return new BusinessException(errMsg, HttpStatus.NOT_FOUND);
-                }
-        );
+                            String errMsg = String.format("ID = %d User Not Found", id);
+                            return new BusinessException(errMsg, HttpStatus.NOT_FOUND);
+                        }
+                );
     }
 
     @GetMapping
@@ -47,6 +52,12 @@ public class UserRestController {
         user.setName(userDetail.getName());
         UserEntity updatedUser = userRepository.save(user);
         return updatedUser;
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deleteUser(@PathVariable Long id){
+        UserEntity existUser = getUserEntity(id);
+
     }
 
 }
