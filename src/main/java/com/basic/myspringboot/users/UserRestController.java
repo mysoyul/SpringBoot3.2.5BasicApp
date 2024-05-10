@@ -57,7 +57,8 @@ public class UserRestController {
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteUser(@PathVariable Long id){
         UserEntity existUser = getUserEntity(id);
-
+        userRepository.delete(existUser);
+        return ResponseEntity.ok(String.format("ID = %d User가 삭제 되었습니다!", id));
     }
 
 }
