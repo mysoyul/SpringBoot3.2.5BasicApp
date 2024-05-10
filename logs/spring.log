@@ -7256,3 +7256,47 @@ org.springframework.web.servlet.resource.NoResourceFoundException: No static res
 2024-05-10T14:19:49.764+09:00  INFO 26256 --- [MyBootApp] [restartedMain] c.b.m.r.MyRunner                         : 환경변수 name = bar
 2024-05-10T14:19:49.764+09:00  INFO 26256 --- [MyBootApp] [restartedMain] c.b.m.r.MyRunner                         : 환경변수 name = spring.application.name
 2024-05-10T14:19:49.765+09:00  INFO 26256 --- [MyBootApp] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-05-10T14:19:58.571+09:00  INFO 26256 --- [MyBootApp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-05-10T14:19:58.617+09:00  INFO 26256 --- [MyBootApp] [Thread-31] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-10T14:19:58.617+09:00  INFO 26256 --- [MyBootApp] [Thread-31] c.z.h.HikariDataSource                   : HikariPool-8 - Shutdown initiated...
+2024-05-10T14:19:58.623+09:00  INFO 26256 --- [MyBootApp] [Thread-31] c.z.h.HikariDataSource                   : HikariPool-8 - Shutdown completed.
+2024-05-10T14:19:58.860+09:00  INFO 26256 --- [MyBootApp] [restartedMain] c.b.m.Application                        : Starting Application using Java 17 with PID 26256 (C:\SpringBoot3.2_Source\MySpringBoot3.2.5App\target\classes started by vega2 in C:\SpringBoot3.2_Source\MySpringBoot3.2.5App)
+2024-05-10T14:19:58.861+09:00  INFO 26256 --- [MyBootApp] [restartedMain] c.b.m.Application                        : The following 1 profile is active: "prod"
+2024-05-10T14:19:59.629+09:00  INFO 26256 --- [MyBootApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-10T14:19:59.661+09:00  INFO 26256 --- [MyBootApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 2 JPA repository interfaces.
+2024-05-10T14:20:00.014+09:00  INFO 26256 --- [MyBootApp] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8080 (http)
+2024-05-10T14:20:00.020+09:00  INFO 26256 --- [MyBootApp] [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2024-05-10T14:20:00.021+09:00  INFO 26256 --- [MyBootApp] [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-10T14:20:00.112+09:00  INFO 26256 --- [MyBootApp] [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2024-05-10T14:20:00.113+09:00  INFO 26256 --- [MyBootApp] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1249 ms
+2024-05-10T14:20:00.262+09:00  INFO 26256 --- [MyBootApp] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-9 - Starting...
+2024-05-10T14:20:00.270+09:00  INFO 26256 --- [MyBootApp] [restartedMain] c.z.h.p.HikariPool                       : HikariPool-9 - Added connection org.mariadb.jdbc.Connection@19e7cdcd
+2024-05-10T14:20:00.271+09:00  INFO 26256 --- [MyBootApp] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-9 - Start completed.
+2024-05-10T14:20:00.272+09:00  INFO 26256 --- [MyBootApp] [restartedMain] o.s.b.a.h.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://127.0.0.1:3307/boot_db?user=boot&password=***'
+2024-05-10T14:20:00.440+09:00  INFO 26256 --- [MyBootApp] [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-10T14:20:00.453+09:00  INFO 26256 --- [MyBootApp] [restartedMain] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2024-05-10T14:20:00.480+09:00  INFO 26256 --- [MyBootApp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-10T14:20:00.494+09:00  WARN 26256 --- [MyBootApp] [restartedMain] o.h.o.deprecation                        : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-05-10T14:20:00.609+09:00  INFO 26256 --- [MyBootApp] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-10T14:20:00.656+09:00  INFO 26256 --- [MyBootApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-10T14:20:01.019+09:00  WARN 26256 --- [MyBootApp] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-10T14:20:01.090+09:00  INFO 26256 --- [MyBootApp] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-05-10T14:20:01.914+09:00  INFO 26256 --- [MyBootApp] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-05-10T14:20:01.930+09:00  INFO 26256 --- [MyBootApp] [restartedMain] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-05-10T14:20:01.982+09:00  INFO 26256 --- [MyBootApp] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8080 (http) with context path ''
+2024-05-10T14:20:01.991+09:00  INFO 26256 --- [MyBootApp] [restartedMain] c.b.m.Application                        : Started Application in 3.232 seconds (process running for 403.295)
+2024-05-10T14:20:01.993+09:00  INFO 26256 --- [MyBootApp] [restartedMain] c.b.m.r.DatabaseRunner                   : DataSource 구현객체는 com.zaxxer.hikari.HikariDataSource 
+2024-05-10T14:20:01.994+09:00  INFO 26256 --- [MyBootApp] [restartedMain] c.b.m.r.DatabaseRunner                   : Database Product Name = MariaDB
+2024-05-10T14:20:01.994+09:00  INFO 26256 --- [MyBootApp] [restartedMain] c.b.m.r.DatabaseRunner                   : Database URL = jdbc:mariadb://127.0.0.1:3307/boot_db?user=boot&password=***
+2024-05-10T14:20:01.995+09:00  INFO 26256 --- [MyBootApp] [restartedMain] c.b.m.r.DatabaseRunner                   : Database UserName = boot
+2024-05-10T14:20:01.995+09:00  INFO 26256 --- [MyBootApp] [restartedMain] c.b.m.r.MyRunner                         : Logger 구현객체 클래스 이름 = org.apache.logging.slf4j.Log4jLogger
+2024-05-10T14:20:01.995+09:00  INFO 26256 --- [MyBootApp] [restartedMain] c.b.m.r.MyRunner                         : Environment ${spring.profiles.active} = prod
+2024-05-10T14:20:01.995+09:00  INFO 26256 --- [MyBootApp] [restartedMain] c.b.m.r.MyRunner                         : CustomerVO Bean = CustomerVO(id=100, mode=운영환경)
+2024-05-10T14:20:01.997+09:00  INFO 26256 --- [MyBootApp] [restartedMain] c.b.m.r.MyRunner                         : MybootProperties = Spring 운영환경 Boot
+2024-05-10T14:20:01.997+09:00  INFO 26256 --- [MyBootApp] [restartedMain] c.b.m.r.MyRunner                         : @Value ${myboot.name} = Spring 운영환경
+2024-05-10T14:20:01.997+09:00  INFO 26256 --- [MyBootApp] [restartedMain] c.b.m.r.MyRunner                         : @Value ${myboot.age} = 22
+2024-05-10T14:20:01.997+09:00  INFO 26256 --- [MyBootApp] [restartedMain] c.b.m.r.MyRunner                         : Environment ${myboot.fullName} = Spring 운영환경 Boot
+2024-05-10T14:20:01.998+09:00  INFO 26256 --- [MyBootApp] [restartedMain] c.b.m.r.MyRunner                         : Environment ${local.server.port} = 8080
+2024-05-10T14:20:01.999+09:00  INFO 26256 --- [MyBootApp] [restartedMain] c.b.m.r.MyRunner                         : 환경변수 name = bar
+2024-05-10T14:20:01.999+09:00  INFO 26256 --- [MyBootApp] [restartedMain] c.b.m.r.MyRunner                         : 환경변수 name = spring.application.name
+2024-05-10T14:20:02.000+09:00  INFO 26256 --- [MyBootApp] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
