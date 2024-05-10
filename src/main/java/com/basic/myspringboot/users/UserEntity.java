@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "users")
 @Getter
-@Setter @Builder
+@Setter
 @DynamicUpdate
 public class UserEntity {
     @Id

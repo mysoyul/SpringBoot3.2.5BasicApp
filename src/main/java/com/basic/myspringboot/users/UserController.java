@@ -37,10 +37,9 @@ public class UserController {
         if (result.hasErrors()) {
             return "add-user";
         }
-        UserEntity userEntity = UserEntity.builder()
-                .name(user.getName())
-                .email(user.getEmail())
-                .build();
+        UserEntity userEntity = new UserEntity();
+        userEntity.setName(user.getName());
+        userEntity.setEmail(user.getEmail());
 
         userRepository.save(userEntity);
 //        model.addAttribute("users", userRepository.findAll());
