@@ -21,7 +21,7 @@ class CustomerRepositoryTest {
     void notFound() {
         Optional<Customer> notExistOptional = customerRepository.findByCustomerId("B001");
         assertThat(notExistOptional).isEmpty();
-
+        Customer customer = notExistOptional.orElseThrow(() -> new RuntimeException("Customer Not Found"));
     }
 
     @Test @Rollback(value = false)
