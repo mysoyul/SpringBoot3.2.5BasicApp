@@ -5,6 +5,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/users")
@@ -29,4 +31,22 @@ public class UserRestController {
                 }
         );
     }
+
+    @GetMapping
+    public List<UserEntity> getUsers() {
+        return userRepository.findAll();
+    }
+
+    @PatchMapping("/{email}/")
+    public UserEntity updateUser(@PathVariable String email, @RequestBody UserEntity userDetail) {
+        UserEntity user = userRepository.findByEmail(email)
+                    .orElseThrow(() -> {
+                            String errMsg = String.format("Email = %s User Not Found", email);
+                            return new BusinessException(errMsg, HttpStatus.NOT_FOUND);
+                    });
+        user.setName(userDetail.getName());
+        UserEntity updatedUser = userRepository.save(user);
+        return updatedUser;
+    }
+
 }
