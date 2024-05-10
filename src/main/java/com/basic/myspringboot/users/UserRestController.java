@@ -1,11 +1,9 @@
 package com.basic.myspringboot.users;
 
-import com.basic.myspringboot.customer.CustomerRepository;
+import com.basic.myspringboot.exception.BusinessException;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
@@ -22,4 +20,9 @@ public class UserRestController {
         return userRepository.save(user);
     }
 
+    @GetMapping(value = "/{id}")
+    public UserEntity getUser(@PathVariable Long id) {
+        return userRepository.findById(id)
+                .orElseThrow(() -> new BusinessException("User Not Found", HttpStatus.NOT_FOUND));
+    }
 }
