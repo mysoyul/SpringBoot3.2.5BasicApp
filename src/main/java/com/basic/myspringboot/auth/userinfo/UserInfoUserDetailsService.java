@@ -1,5 +1,6 @@
 package com.basic.myspringboot.auth.userinfo;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -10,17 +11,17 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 
 @Service
+@RequiredArgsConstructor
 public class UserInfoUserDetailsService implements UserDetailsService {
-    @Autowired
-    private UserInfoRepository repository;
-    @Autowired
-    private PasswordEncoder passwordEncoder;
+    private final UserInfoRepository repository;
+    private final PasswordEncoder passwordEncoder;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Optional<UserInfo> optionalUserInfo = repository.findByEmail(username);
-        return optionalUserInfo.map(userInfo -> new UserInfoUserDetails(userInfo))
-                //userInfo.map(UserInfoUserDetails::new)
+        return optionalUserInfo
+                //.map(userInfo -> new UserInfoUserDetails(userInfo))
+                .map(UserInfoUserDetails::new)
                 .orElseThrow(() -> new UsernameNotFoundException("user not found " + username));
     }
 
