@@ -23,6 +23,10 @@ public class UserRestController {
     @GetMapping(value = "/{id}")
     public UserEntity getUser(@PathVariable Long id) {
         return userRepository.findById(id)
-                .orElseThrow(() -> new BusinessException("User Not Found", HttpStatus.NOT_FOUND));
+                .orElseThrow(() -> {
+                    String errMsg = String.format("ID = %d User Not Found", id);
+                    return new BusinessException(errMsg, HttpStatus.NOT_FOUND);
+                }
+        );
     }
 }
