@@ -1,6 +1,7 @@
 package com.basic.myspringboot.users;
 
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
@@ -11,7 +12,7 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "users")
 @Getter
-@Setter
+@Setter @Builder
 @DynamicUpdate
 public class UserEntity {
     @Id
