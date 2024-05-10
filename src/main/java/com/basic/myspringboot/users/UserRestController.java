@@ -18,6 +18,11 @@ public class UserRestController {
 //        this.userRepository = userRepository;
 //    }
 
+    @GetMapping("/welcome")
+    public String welcome() {
+        return "Welcome this endpoint is not secure";
+    }
+
     @PostMapping
     public UserEntity create(@RequestBody UserEntity user) {
         return userRepository.save(user);
